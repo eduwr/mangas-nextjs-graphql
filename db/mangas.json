@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Jujutsu Kaisen",
+    "score": 8.88,
+    "author": "Gege Akutami",
+    "demographic": "SHONEN",
+    "categories": [
+      "ADVENTURE",
+      "DARK_FANTASY",
+      "SUPERNATURAL"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Kimetsu no Yaiba",
+    "score": 9.50,
+    "author": "Koyoharu Gotōge",
+    "demographic": "SHONEN",
+    "categories": [
+      "ACTION",
+      "ADVENTURE",
+      "DARK_FANTASY"
+    ]
+  }
+]
