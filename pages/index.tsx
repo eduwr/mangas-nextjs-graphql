@@ -21,13 +21,17 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {data?.mangas.map((manga) => (
-        <Link key={manga.id} href={`/manga/${manga.id}`}>
-          <a>
-            <h3>{manga.name}</h3>
-          </a>
-        </Link>
-      ))}
+      <ul>
+        {data?.mangas.map((manga) => (
+          <li key={manga.id}>
+            <Link href={`/manga/${manga.id}`}>
+              <a>
+                <h3>{manga.name}</h3>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
       {error && <span>Oops! Something went wrong.</span>}
     </div>
   );
