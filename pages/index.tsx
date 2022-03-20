@@ -1,10 +1,8 @@
 import type { NextPage } from "next";
-import { gql, request } from "graphql-request";
-import styles from "../styles/Home.module.css";
+import { gql } from "graphql-request";
+
 import useSWR from "swr";
 import { Manga } from "../types/mangas";
-
-const fetcher = (query: string) => request("/api/graphql", query);
 
 const MANGAS_QUERY = gql`
   query Mangas {
@@ -19,7 +17,7 @@ type FetchResponse = {
   mangas: Manga[];
 };
 const Home: NextPage = () => {
-  const { data, error } = useSWR<FetchResponse>(MANGAS_QUERY, fetcher);
+  const { data, error } = useSWR<FetchResponse>(MANGAS_QUERY);
 
   return (
     <div>
